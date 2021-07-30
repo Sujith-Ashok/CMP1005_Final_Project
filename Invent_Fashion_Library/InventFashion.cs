@@ -3,19 +3,19 @@ namespace Invent_Fashion_Library
 {
     public class InventFashion
     {
-       static double calculateHST(double subTotal)
+       static public double calculateHST(double subTotal)
         {
             double tax = subTotal * 0.13;
             return tax;
         }
 
-        static double totalAmount(double subTotal)
+        static public double totalAmount(double subTotal)
         {
             double tax = subTotal * 0.13;
             return subTotal + tax;
         }
 
-        static String sizeCalculator(double size)
+        static public String sizeCalculator(double size)
         {
             String alphabetSize = "Sorry Enter valid size between 36 to 50";
             if (size >= 36 && size < 38) {
@@ -53,7 +53,7 @@ namespace Invent_Fashion_Library
                 return alphabetSize;
             }
 
-            if (size >= 48 && size < 50)
+            if (size >= 48 && size <= 50)
             {
                 alphabetSize = "XXL";
                 return alphabetSize;
