@@ -5,6 +5,28 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+  <h1 class="display-4">Welcome to Invent Fashion</h1>
+            <p>Where fashion meets your creativity</p>
+            <br />
+            <br />
+            <br />
+            <br />
 </div>
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p><h3> Try out own unique and low cost designer dresses </h3></p>
+    <p><h3> Select Gender </h3></p>
+    <p> <a href="/Male"> <input type="button" value="Male"> </a>  </p>
+    <p> <a href="/Female"> <input type="button" value="Female"> </a>  </p>
+}
+
+else
+{
+
+<div class="text-center">
+    <p><h5> Order your low cost designer dresses </h5></p>
+    <p><h5> Click login/sign up to start </h5></p>
+</div>
+}
