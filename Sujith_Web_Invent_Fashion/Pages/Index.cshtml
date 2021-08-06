@@ -3,14 +3,62 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<style>
 
+    .buttonMale {
+        background-color: #185adb;
+        border-radius: 12px;
+        color: #ffc947;
+        border: 2px solid #000000;
+        font-size: 18px;
+        padding: 10px 12px;
+        width: 80%;
+    }
+
+        .buttonMale:hover {
+            background-color: #ffc947;
+            color: white;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+    .buttonFemale {
+        background-color: #185adb;
+        border-radius: 12px;
+        color: #ffc947;
+        border: 2px solid #000000;
+        font-size: 18px;
+        padding: 10px 12px;
+        margin-top: 8px;
+    }
+
+        .buttonFemale:hover {
+            background-color: deeppink;
+            color: White;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    .buttonDefault {
+        background-color: #185adb;
+        border-radius: 12px;
+        color: #ffc947;
+        border: 2px solid #000000;
+        font-size: 18px;
+        padding: 10px 12px;
+        margin-top: 8px;
+    }
+
+        .buttonDefault:hover {
+            background-color: skyblue;
+            color: White;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+</style>
 <div class="text-center">
   <h1 class="display-4">Welcome to Invent Fashion</h1>
             <p>Where fashion meets your creativity</p>
             <br />
             <br />
-            <br />
-            <br />
+          
 </div>
 
 
@@ -19,8 +67,12 @@
 <div class="text-center">
     <p><h3> Try out own unique and low cost designer dresses </h3></p>
     <p><h3> Select Gender </h3></p>
-    <p> <a href="/Male"> <input type="button" value="Male"> </a>  </p>
-    <p> <a href="/Female"> <input type="button" value="Female"> </a>  </p>
+    @*<asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo.png" />*@
+    <img src="~/Images/logo.png" />
+    <img src="~/images/logo.png" height="48" width="48" asp-append-version="true" />
+    <p> <a href="/Female" class="buttonMale">Male</a> </p><br />
+    <p> <a href="/Female" class="buttonFemale">Female</a> </p>
+
 </div>
 }
 
@@ -30,7 +82,8 @@ else
 <div class="text-center">
     <p><h5> Order your low cost designer dresses </h5></p>
     <p><h5> Click login/sign up to start </h5></p>
-    <p> <a href="/Identity/Account/Register"> <input type="button" value="Register"> </a>  </p>
-    <p> <a href="/Identity/Account/Login"> <input type="button" value="Login"> </a>  </p>
+    <p> <a href="/Identity/Account/Register" class="buttonDefault">Register</a> </p><br />
+    <p> <a href="/Identity/Account/Login" class="buttonDefault">Login</a> </p>
+    
 </div>
 }
