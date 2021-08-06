@@ -12,7 +12,8 @@
         border: 2px solid #000000;
         font-size: 18px;
         padding: 10px 12px;
-        width: 80%;
+        width: 100px;
+       
     }
 
         .buttonMale:hover {
@@ -28,7 +29,7 @@
         border: 2px solid #000000;
         font-size: 18px;
         padding: 10px 12px;
-        margin-top: 8px;
+        width: 100px;
     }
 
         .buttonFemale:hover {
@@ -43,7 +44,7 @@
         border: 2px solid #000000;
         font-size: 18px;
         padding: 10px 12px;
-        margin-top: 8px;
+        width: 100px;
     }
 
         .buttonDefault:hover {
@@ -67,11 +68,20 @@
 <div class="text-center">
     <p><h3> Try out own unique and low cost designer dresses </h3></p>
     <p><h3> Select Gender </h3></p>
-    @*<asp:Image ID="Image1" runat="server" ImageUrl="~/images/logo.png" />*@
-    <img src="~/Images/logo.png" />
-    <img src="~/images/logo.png" height="48" width="48" asp-append-version="true" />
+    <table style="margin-left:auto;margin-right:auto;">
+        <tr>
+            <td><img src="~/images/male_sample.jpg" height="250" width="250" /> </td>
+            <td><img src="~/images/female_sample.jpg" height="250" width="250" /></td>
+        </tr>
+        <tr>
+            <td> <p> <br /><a href="/Male" class="buttonMale">Male</a> </p><br /></td>
+            <td><p> <a href="/Female" class="buttonFemale">Female</a> </p></td>
+        </tr>
+    </table>
+    
+    @*<img src="~/images/logo.png" height="48" width="48"/>
     <p> <a href="/Female" class="buttonMale">Male</a> </p><br />
-    <p> <a href="/Female" class="buttonFemale">Female</a> </p>
+    <p> <a href="/Female" class="buttonFemale">Female</a> </p>*@
 
 </div>
 }
