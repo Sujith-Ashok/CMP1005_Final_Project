@@ -30,6 +30,11 @@ namespace Sujith_Web_Invent_Fashion
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<inventFashionDbContext>(options =>
+                options.UseSqlite(
+                    Configuration.GetConnectionString("InventFashionConnection")));
+
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
